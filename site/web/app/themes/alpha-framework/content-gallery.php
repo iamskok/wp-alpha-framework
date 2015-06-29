@@ -33,13 +33,9 @@
 	<!-- Article content -->
 	<div class="entry-content">
 		<?php
-		if ( is_search() ) {
-			the_excerpt();
-		} else {
 			the_content( __( 'Continue reading &rarr;', 'alpha' ) );
 
 			wp_link_pages();
-		}
 		?>
 	</div> <!-- end entry-content -->
 
