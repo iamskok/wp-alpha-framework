@@ -90,6 +90,7 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 * 5.0 - Display meta information for a specific post
 * ----------------------------------------------------------------------------------------------------------------------------
 */
+
 if ( ! function_exists( 'alpha_post_meta' ) ) {
 	function alpha_post_meta() {
 		echo '<ul class="list-inline entry-meta">';
@@ -144,4 +145,34 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 		}
 	}
 }
+
+/**
+* ----------------------------------------------------------------------------------------------------------------------------
+* 6.0 - Display navigation to the next/previous set of posts.
+* ----------------------------------------------------------------------------------------------------------------------------
+*/
+
+if ( ! function_exists( 'alpha_paging_nav' ) ) {
+	function alpha_paging_nav() { ?>
+		<ul>
+			<?php
+				if ( get_previous_posts_link() ) : ?>
+					<li class="next">
+						<?php previous_posts_link( __( 'Newer Posts &rarr;', 'alpha' ) ); ?>
+					</li>
+				<?php endif;
+			?>
+
+			<?php
+				if ( get_next_posts_link() ) : ?>
+					<li class="previous">
+						<?php next_posts_link( __( '&larr; Older Posts', 'alpha' ) ); ?>
+					</li>
+				<?php endif;
+			?>
+		</ul> <?php
+	}
+}
+
+
 ?>
