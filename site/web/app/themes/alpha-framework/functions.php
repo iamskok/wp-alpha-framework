@@ -45,8 +45,8 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 		/**
 		* Make the theme avaliable for translation.
 		*/
-		$lang_dir = THEMEROOT . '/languages';
-		load_theme_textdomain( 'alpha', $land_dir );
+		// $lang_dir = THEMEROOT . '/languages';
+		// load_theme_textdomain( 'alpha', $land_dir );
 
 		/**
 		* Add support for post formats.
@@ -82,7 +82,7 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 		);
 	}
 
-	add_action( 'after_theme_setup', 'alpha_setup' );
+	add_action( 'after_setup_theme', 'alpha_setup' );
 }
 
 /**

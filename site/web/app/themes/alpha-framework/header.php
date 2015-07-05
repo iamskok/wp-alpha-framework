@@ -19,7 +19,7 @@
 	<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ) ?></title>
 	<meta name="description" content="<?php bloginfo( 'description' ) ?>">
 
-	<!-- Mobile SPecific Meta -->
+	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Stylesheets -->
@@ -30,7 +30,38 @@
 
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
-</body>
-</html>
+<!-- Header -->
+<header class="site-header" role="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="site-logo">
+					<a href="<?php esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<nav class="site-navigation" role="navigation">
+					<?php
+						/**
+						* Displays a navigation menu
+						* @param array $args Arguments
+						*/
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu',
+								'menu_class' => 'site-menu'
+							)
+						);
+					?>
+				</nav>
+			</div><!-- .col-xs-9 -->
+		</div><!-- .row -->
+	</div><!-- . container -->
+</header><!-- .site-header -->
+
+<!-- Main Contnent Area -->
+<div class="container">
+	<div class="row">
+
