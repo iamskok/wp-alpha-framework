@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- Article header -->
-	<header class="class-entry">
+	<header class="entry-header">
 		<?php
 		// If the post has a thumbnail and it's not password protected
 		// then display the thumbnail
@@ -36,7 +36,7 @@
 				alpha_post_meta();
 			?>
 		</p>
-	</header>
+	</header><!-- .entry-header -->
 
 	<!-- Article content -->
 	<div class="entry-content">
@@ -49,7 +49,7 @@
 			wp_link_pages();
 		}
 		?>
-	</div> <!-- end entry-content -->
+	</div><!-- .entry-content -->
 
 	<!-- Article footer -->
 	<footer class="entry-footer">
@@ -60,6 +60,6 @@
 				echo '<p>' . the_author_meta( 'description' ) . '</p>';
 			}
 		?>
-	</footer>
+	</footer><!-- .entry-footer -->
 
 </article>

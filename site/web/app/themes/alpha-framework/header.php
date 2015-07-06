@@ -58,7 +58,7 @@
 				</nav>
 			</div><!-- .col-xs-9 -->
 		</div><!-- .row -->
-	</div><!-- . container -->
+	</div><!-- .container -->
 </header><!-- .site-header -->
 
 <!-- Main Contnent Area -->
